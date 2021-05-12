@@ -1,0 +1,443 @@
+/* Header across all pages */
+body {
+    margin:0;
+    overflow: auto;
+    position: relative;
+    min-height: 100vh;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    height: fit-content;
+}
+
+header {
+    background-color: rgb(41, 41, 41);
+    width: 100%;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+div.title-icon {
+    overflow: auto;
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 42px;
+    text-align: center;
+    margin: 10px;
+    display: inline;
+    font-family: Helvetica;
+}
+
+h2 {
+    font-family: Helvetica;
+    font-size: 32px;
+}  
+
+#icon{
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 5%;
+    height: 5%;
+    color: white;
+    margin-top: 10px;
+}
+
+ul.header {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(40, 40, 40);
+}
+  
+li.header a{
+    display: block;
+    float: right;
+    font-size: 18px;
+    font-family: Helvetica;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 16px 5px 16px;
+    text-decoration: none;
+}
+  
+li a:hover {
+    background-color: #111;
+}
+
+div.wrapper {
+    width: 100%;
+    display: inline-block;
+    overflow: auto;
+}
+
+ul.general-nav {
+    margin: auto;
+    width: 80%;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: rgb(40, 40, 40);
+}
+
+li.general-nav {
+    float: left;
+}
+  
+li.general-nav a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-family: Helvetica;
+    color: white;
+    text-align: left;
+    padding: 5px 16px 5px 16px;
+    text-decoration: none;
+}
+
+#username-placeholder {
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-family: Helvetica;
+    color: rgb(25, 141, 25);
+    text-align: right;
+    padding: 5px 16px 5px 16px;
+    text-decoration: none;
+}
+
+p.footer {
+    color: white;
+    
+    font-family: Helvetica;
+    font-size: 18px;
+    margin-left: 5px;
+    display: inline;
+}
+
+a.footer {
+    display: inline;
+    color: white;
+    font-family: Helvetica;
+    font-size: 18px;
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+footer {
+    background-color: rgb(41, 41, 41);
+    position: absolute;
+    padding-top: 10px;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;    
+}
+
+div.footer-wrap {
+    padding-bottom: 2.5rem;
+}
+
+div.center {
+    text-align: center;
+}
+
+a.link:link {
+    color: black;
+  }
+
+a.link:visited {
+    color: black;
+}
+
+/* index.html */
+p.intro {
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+div.img-wrapper {
+    display: flex;
+    justify-content: left;
+    overflow: auto;
+    height: fit-content;
+    margin: 15px;
+}
+
+#uncc {
+    width: 15%;
+    height: 15%;
+    padding-right: 50px;
+}
+
+#concert {
+    width: 30%;
+    height: 35%;
+}
+
+/* connection.html */
+div.connections {
+    margin-left: 5%;
+    width: 90%; 
+}
+
+div.left, div.mid, div.right {
+    display: inline-block;
+}
+
+div.text-image-container {
+    text-align: center;
+    position: relative;
+}
+
+div.centered-on-image {
+    font-family: Helvetica;
+    font-size: 52px;
+    font-weight: bold;
+    border-radius: 20px;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+img.genres {
+    opacity: .9;
+
+    padding: 0px 0px 0px 0px;
+    width: 100%;
+    height: 400px;
+    
+}
+
+/* connections-expanded.html */
+h3 {
+    font-family: Helvetica;
+    font-size: 32px;
+    text-align: center;
+}
+
+img.table-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+td{
+    font-family: Helvetica;
+    font-size: 18px;
+    padding: 0px 15px 15px 0px;
+}
+
+td.text {
+    width: 115px;
+}
+
+td.between {
+    padding-left: 80px;
+}
+
+/* connection.html */
+h4 {
+    font-family: Helvetica;
+    font-size: 32px;
+    text-align: left;
+}
+
+h5 {
+    font-family: Helvetica;
+    font-size: 24px;
+    text-align: left;
+    display: inline;
+}
+
+h5.details {
+    font-family: Helvetica;
+    font-size: 24px;
+    text-align: left;
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+p.connection {
+    display: inline;
+    font-family: Helvetica;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+div.column {
+    width: 49%;
+    float: left;
+}
+
+button {
+    border: 1px solid black;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;   
+}
+
+div.connection {
+    width: 60%;
+    margin: auto;
+    height: fit-content;
+}
+
+#connection {
+    width: 200px;
+    height: 200px;
+    padding-top: 25px;
+}
+
+#yes {
+    background-color: green;
+}
+
+#no {
+    background-color: red;
+}
+
+#maybe {
+    background-color: rgba(12, 12, 209, 0.623);
+}
+
+/* savedConnections.html */
+td.saved, th.saved {
+    width: 100px;
+    text-align: left;
+    border:1px solid black;
+    padding: 4px 0px 4px 5px;
+}
+
+td.wide, th.wide {
+    padding: 4px 0px 4px 5px;
+    width: 200px;
+    text-align: left;
+    border:1px solid black;
+}
+
+td.wide2, th.wide2 {
+    padding: 4px 0px 4px 5px;
+    width: 135px;
+    border:1px solid black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+}
+
+button.update-delete {
+    font-size: 14px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 8px 10px;
+    border: 1px solid white;
+    text-align: center;
+    display: inline-block;   
+}
+
+h6 {
+    font-family: Helvetica;
+    font-size: 22px;
+    text-align: center;
+    margin: 15px;
+}
+
+/* newConnection */
+div.form {
+    width: 45%;
+    margin: auto;
+    height: fit-content;
+}
+
+h1.form {
+    color: black;
+    text-align: center;
+    font-size: 42px;
+    display: block;
+}
+
+#details {
+    height: 50px;
+}
+
+p.form {
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+label {
+    font-family: Helvetica;
+    font-size: 18px;
+}
+
+input[type=text], select, textarea {
+    font-family: Helvetica;
+    font-size: 14px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(182, 182, 182);
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+input[type=password] {
+    font-family: Helvetica;
+    font-size: 14px;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(182, 182, 182);
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+input[type=datetime-local] {
+    padding: 12px;
+    border: 1px solid rgb(182, 182, 182);
+    margin-top: 6px;
+
+
+}
+  
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+input[type=submit]:hover {
+    background-color: rgb(21, 124, 21);
+}
+  

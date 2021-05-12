@@ -1,0 +1,10 @@
+    <div class="wrapper">
+        <ul class="general-nav">
+            <li class="general-nav"><a href="/">Home</a></li>
+            <li class="general-nav"><a href="/genres">Genres</a></li>
+            <% if(typeof theUser != 'undefined') { %>
+                <li id="username-placeholder">Welcome <%= theUser.fname %></li>
+            <% } %>
+        </ul>
+    </div>
+</header>

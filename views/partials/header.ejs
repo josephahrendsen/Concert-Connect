@@ -1,0 +1,17 @@
+<header>
+    <div class="title-icon">
+        <a href="index.ejs"><img id="icon" src="/assets/images/icon.png" alt="icon"></a>
+        <h1>Concert Connect</h1>
+    </div>
+    <ul class="header">
+        <% if(typeof theUser == 'undefined') { %>
+            <li class="header"><a href="/connections/newConnection">Start a new connection</a></li>
+            <li class="header"><a href="/connections/login">Login</a></li>
+            <li class="header"><a href="">Sign up</a></li>
+        <% } else { %>
+            <li class="header"><a href="/connections/newConnection">Start a new connection</a></li>
+            <li class="header"><a href="/connections/savedConnections">My Connections</a></li>
+            <li class="header"><a href="/connections/signout">Sign out</a></li>            
+        <% } %> 
+    </ul>
+    <hr>

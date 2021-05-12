@@ -1,0 +1,80 @@
+use ConcertConnect;
+db.createCollection("users");
+db.createCollection("connections");
+db.createCollection("userConnections");
+db.connections.insert([
+        {
+            "id": "A1",
+            "band": "Red Hot Chili Peppers",
+            "genre": "Rock",
+            "details": "Get excited for the Red Hot Chili Peppers! This will be there 4th performance in Charlotte, NC and 6th stop on their 2021 tour.",
+            "location": "Charlotte Metro Credit Union Ampitheatre",
+            "date": "August 14, 2021",
+            "time": "6:00 PM"
+        },
+        {
+            "id": "A2",
+            "band": "Queen",
+            "genre": "Rock",
+            "details": "It's your lucky day. Queen is performing right here at the Fillmore. Come join us!",
+            "location": "PNC Music Pavilion",
+            "date": "July 5, 2021",
+            "time": "7:00 PM"            
+        },
+        {
+            "id": "A3",
+            "band": "Bon Jovi",
+            "genre": "Rock",
+            "details": "Join us for Bon Jovi's 50th anniversary tour.",
+            "location": "PNC Music Pavilion",
+            "date": "May 1, 2021",
+            "time": "6:45 PM"
+        },
+
+        {
+            "id": "B1",
+            "band": "Andy Grammer",
+            "genre": "Pop",
+            "details": "Come join Andy Grammer in his 5th tour in North Carolina!",
+            "location": "The Fillmore",
+            "date": "August 3, 2021",
+            "time": "8:00 PM"
+        },
+
+        {
+            "id": "B2",
+            "band": "Taylor Swift",
+            "genre": "Pop",
+            "details": "Join us for the debut of Taylor Swift's new album!",
+            "location": "PNC Music Pavilion",
+            "date": "May 15, 2021",
+            "time": "7:00 PM"
+        },
+
+        {
+            "id": "B3",
+            "band": "AJR",
+            "genre": "Pop",
+            "details": "Get excited for AJR! This trio has gained incredible popularity in the past couple of years.",
+            "location": "The Fillmore",
+            "date": "July 2, 2021",
+            "time": "7:30 PM"
+        }
+]);
+
+db.users.insert({
+    "_id": 5,
+    "fname": "Paul",
+    "lname": "Blart",
+    "email": "paulblart@gmail.com"
+})
+
+db.userProfiles.insert({
+    "user": {
+        "_id": 5,
+        "fname": "Paul",
+        "lname": "Blart",
+        "email": "paulblart@gmail.com"
+    },
+    "userConnections": []
+})

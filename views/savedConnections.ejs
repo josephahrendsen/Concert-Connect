@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Concert Connect</title>
+  <meta name="author" content="Joseph Ahrendsen">
+  <link rel="stylesheet" href="/assets/stylesheets/app.css">
+</head>
+
+<body>
+    <%- include('partials/header') -%> 
+    <%- include('partials/navigation') -%> 
+
+    <% if(userConnections.length != 0) { %>
+        <h6><%= theUser.fname %>'s Connections</h6>
+        <table>
+            <tbody>          
+                <tr>
+                <th class="wide">Concerts Confirmed</th>
+                <th class="saved">Genre</th>
+                <th class="saved">Going?</th>
+                <th class="wide2">RSVP</th>
+                </tr>
+                <% for(var i = 0; i < userConnections.length; i++) { %>
+                    <tr>
+                        <td class="wide"> <%= userConnections[i].connection.band %> </td>
+                        <td class="saved"> <%= userConnections[i].connection.genre %> </td>
+                        <td class="saved"> <%= userConnections[i].rsvp %> </td>
+                        <td class="wide2">
+                            <% var action = "/genres/" + userConnections[i].connection.genre.toLowerCase() + "/" + userConnections[i].connection.band.replace(/\s+/g, '').toLowerCase()%>
+                            <form action="<%= action %>" method="POST">
+                                <button class="update-delete" name="update" value="<%= userConnections[i].connection.id %>" type="submit">Update</button>
+                            </form>
+
+                            <form action="/connections/savedConnections/delete" method="POST">
+                                <button class="update-delete" name="delete" value="<%= userConnections[i].connection.id %>" type="submit">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                <% } %>
+            <% } else { %>
+                <h3><%= theUser.fname %>, You have not saved any concerts. <br>Checkout the available shows or host your own concert.</h3>
+            <% } %>
+            
+        </tbody>
+    </table>
+
+        <%- include('partials/footer') -%> 
+</body>
+</html>

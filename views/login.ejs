@@ -1,0 +1,31 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Concert Connect</title>
+  <meta name="author" content="Joseph Ahrendsen">
+  <link rel="stylesheet" href="/assets/stylesheets/app.css">
+</head>
+<body>
+    <%- include('partials/header') -%> 
+    <%- include('partials/navigation') -%> 
+    
+    <div class="form">
+        <h2>Welcome to Concert Connect</h2>
+        <p class="form">Please enter your username and password to sign in</p>
+
+        <form id="login" method="POST" action="/connections/login">    
+            <label for="username">Username: </label><br>
+            <input type="text" id="username" name="username" placeholder="username"><br>
+
+            <label for="password">Password: </label><br>
+            <input type="password" id="password" name="password" placeholder="password"><br>
+            <input type="submit" value="Submit">
+        </form> 
+    </div>
+    
+    <%- include('partials/footer') -%> 
+</body>
+</html>

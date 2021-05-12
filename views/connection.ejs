@@ -1,0 +1,49 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Concert Connect</title>
+  <meta name="author" content="Joseph Ahrendsen">
+  <link rel="stylesheet" href="/assets/stylesheets/app.css">
+</head>
+
+<body>
+    <%- include('partials/header') -%> 
+    <%- include('partials/navigation') -%> 
+    
+    <div class="connection">
+        <!--All info will come from database-->
+        <div class="column">
+            <h4> <%= band.band %> </h4>
+            <h5>Location:</h5>
+            <p class="connection"> <%= band.location %> </p>
+            <br>
+
+            <h5>Date: </h5>
+            <p class="connection"> <%= band.date %> </p>
+            <br>
+
+            <h5>Time: </h5>
+            <p class="connection"> <%= band.time %> </p>
+            <br>
+            <img id="connection" alt="<%=band.band %>" src= "<%= '/assets/images/band/' + band.band.replace(/\s+/g, '').toLowerCase() + '.jpg'; %>">
+        </div>
+        <div class="column">
+            <h4>Are you going?</h4>
+            <form action="/connections/rsvp" method="POST">
+                <button id="yes" name="rsvp" value="yes" type="submit">Yes</button>
+                <button id="no" name="rsvp" value="no" type="submit">No</button>
+                <button id="maybe" name="rsvp" value="maybe" type="submit">Maybe</button>
+            </form>
+
+            <h5 class="details">Details</h5>   
+            <p class="connection"> <%=band.details %> </p> 
+        </div>
+    </div>
+
+    <%- include('partials/footer') -%> 
+</body>
+</html>
+

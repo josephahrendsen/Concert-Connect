@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Concert Connect</title>
+  <meta name="author" content="Joseph Ahrendsen">
+  <link rel="stylesheet" href="/assets/stylesheets/app.css">
+</head>
+<body>
+    <%- include('partials/header') -%> 
+    <%- include('partials/navigation') -%> 
+    
+    <main>
+        <% if(bands.length == 0) { %>
+            <h3>There are no upcoming concerts</h3>
+        <% } 
+        else { %>
+            <h3>Upcoming <%= bands[0].genre %> Concerts</h3> 
+        <% } %>   
+        <table>
+            <tr>
+                <% for(i = 0; i < bands.length; i++) { %>
+                    <td>        
+
+                        <% var details = bands[i].genre.toLowerCase() + '/' + bands[i].band.replace(/\s+/g, '').toLowerCase(); %>                        
+                        <a href= <%=details%> >
+                            <% var imgURL = '/assets/images/band/' + bands[i].band.replace(/\s+/g, '').toLowerCase() + '.jpg'; %>
+                            <img class="table-image" src= <%=imgURL %> alt="<%= bands[i].band %>">
+                        </a>
+                    </td>
+                    <td class="text"> 
+                        <%= bands[i].band %> 
+                    </td>
+            
+            <% } %>
+            </tr>
+            
+        </table>
+    </main>
+    
+    <%- include('partials/footer') -%> 
+</body>
+</html>

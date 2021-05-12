@@ -1,0 +1,76 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Concert Connect</title>
+  <meta name="author" content="Joseph Ahrendsen">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/app.css">
+  <link rel="stylesheet" type="text/css" href="/assets/stylesheets/jcarousel.responsive.css">
+  <script type="text/javascript" src="/jquery/jquery.js"></script>
+  <!--Source: https://sorgalla.com/jcarousel/-->
+  <script type="text/javascript" src="/jquery/jquery.jcarousel.min.js"></script>
+  <script type="text/javascript" src="/jquery/jcarousel.responsive.js"></script>
+</head>
+<body>
+    <%- include('partials/header') -%> 
+    <%- include('partials/navigation') -%> 
+    
+    <div class="connections">
+        <!--The jcourousel plugin will create a slideshow with 3 images at a time.-->
+        <div class="jcarousel-wrapper">
+            <div class="jcarousel">
+                <ul>
+                    <li>
+                        
+                        <div class="text-image-container">
+                            <!-- This will add an image to the slideshow as well as centerering a textbox on it.
+                                Both the image and text link to the next page.-->
+                            <a class="link" href="genres/rock"><img class="genres" alt="Rock" src="../assets/images/genres/rock.jpg"></a>
+                            <a class="link" href="genres/rock"><div class="centered-on-image">Rock</div></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text-image-container">
+                            <a class="link" href="genres/indie"><img class="genres" alt="Indie" src="../assets/images/genres/indie.jpg"></a>
+                            <a class="link" href="genres/indie"><div class="centered-on-image">Indie</div></a>
+                        </div>                    
+                    </li>
+                    <li>
+                        <div class="text-image-container">
+                            <a class="link" href="genres/pop"><img class="genres" alt="Pop" src="../assets/images/genres/pop.jpg"></a>
+                            <a class="link" href="genres/pop"><div class="centered-on-image">Pop</div></a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="text-image-container">
+                            <a class="link" href="genres/country"><img class="genres" alt="Country" src="../assets/images/genres/country.jpg"></a>
+                            <a class="link" href="genres/country"><div class="centered-on-image">Country</div></a>
+                        </div>  
+                    </li>
+                    <li>
+                        <div class="text-image-container">
+                            <a class="link" href="genres/jazz"><img class="genres" alt="Jazz" src="../assets/images/genres/jazz.jpg"></a>
+                            <a class="link" href="genres/jazz"><div class="centered-on-image">Jazz</div></a>
+                        </div>                    
+                    </li>
+                    <li>
+                        <div class="text-image-container">
+                            <a class="link" href="genres/rap"><img class="genres" alt="Rap" src="../assets/images/genres/rap.jpg"></a>
+                            <a class="link" href="genres/rap"><div class="centered-on-image">Rap</div></a>
+                        </div>                      
+                    </li>
+                </ul>
+            </div>
+
+            <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+            <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+            <p class="jcarousel-pagination"></p>
+        </div>
+    </div>
+
+    <%- include('partials/footer') -%> 
+</body>
+</html>
